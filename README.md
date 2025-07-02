@@ -1,4 +1,38 @@
-## 🖼️ 디자인 화면 
+# 👕 lenTee – 의류 렌탈 서비스
+
+**lenTee(렌티)**는 최신 패션을 합리적인 가격에 즐길 수 있는 **의류 렌탈 플랫폼**입니다.  
+웹/모바일 환경에서 사용자에게 다양한 상품을 보여주고, 렌탈 신청 → 결제 → 반납까지 **원스톱 경험**을 제공합니다.
+
+---
+
+## 🛠 핵심 기능
+
+- **🧑‍💼 사용자**
+  - 회원가입 및 로그인 (SNS 연동 가능)
+  - 상품 검색, 필터링, 카테고리별 탐색
+  - 대여기간 선택, 장바구니 → 결제 기능
+  - 대여 내역 확인 및 반납 요청
+
+- **👔 관리자**
+  - 상품 등록/수정/삭제
+  - 재고 및 렌탈 상태 관리
+  - 주문·반납 처리 및 통계 분석 대시보드
+
+---
+
+## 🧩 사용 기술 스택
+
+| 분야       | 기술 및 라이브러리 |
+| 프론트엔드 - React, Redux, Tailwind CSS 
+| 백엔드 - Spring Boot, JPA, MySQL 
+| 인증 - JWT(카카오, 네이버 등) 
+| CI/CD - GitHub Actions 
+
+---
+
+## 🖼️ UI/UX 디자인 — Figma
+
+서비스 전체 플로우는 Figma로 설계하였으며, 주요 화면은 아래와 같습니다:
 
 <details>
   <summary>🖼️ 스플래시 화면 보기</summary>
@@ -128,3 +162,15 @@
   <img src="./docs/images/게시글등록/게시글 작성.png" width="200" alt="게시글 작성">
 </details>
 
+## 🚀 실행 및 배포
+
+```bash
+# 저장소 클론 및 백엔드 실행
+git clone https://github.com/kimjohoon95/lenTee.git
+cd backend
+./gradlew bootRun
+
+# 프론트엔드 실행 (별도 터미널)
+cd ../frontend
+npm install
+npm start
