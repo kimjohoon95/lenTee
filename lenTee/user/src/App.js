@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Splash from './components/Splash';
+import LoginPage from './components/LoginPage';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -28,11 +29,8 @@ function App() {
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>React → Spring Boot 연동 예제</h2>
-      <p>{message}</p>
-    </div>
-  );
+    <LoginPage />
+  )
 }
 
 export default App;
