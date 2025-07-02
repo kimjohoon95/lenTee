@@ -24,23 +24,29 @@
 <details>
   <summary>🖼️ 회원가입 화면 </summary>
   <br>
-  <span> 본인인증 </span>
+  <span style = "font-size: 1.5em; font-weight: bold;"> [ 본인인증 ] </span>
+
   <br>
   <img src="./docs/images/회원가입/MO_본인인증-1.png" width="200" alt="회원가입 화면">
   <img src="./docs/images/회원가입/MO_본인인증-2.png" width="200" alt="회원가입 화면">
   <img src="./docs/images/회원가입/MO_본인인증-3.png" width="200" alt="회원가입 화면">
   <img src="./docs/images/회원가입/MO_본인인증.png" width="200" alt="회원가입 화면">
+  
   <br>
-  <span> 서비스 환영 </span>
+  <span style = "font-size: 1.5em; font-weight: bold;"> [ 서비스 환영 ] </span>
+
   <br>
   <img src="./docs/images/회원가입/MO_서비스 환영.png" width="200" alt="회원가입 화면">
-   <br>
-  <span> 약관 동의 </span>
+
+  <br>
+  <span style = "font-size: 1.5em; font-weight: bold;"> [ 약관 동의 ] </span>
   <br>
   <img src="./docs/images/회원가입/MO_약관동의-1.png" width="200" alt="회원가입 화면">
   <img src="./docs/images/회원가입/MO_약관동의.png" width="200" alt="회원가입 화면">
-   <br>
-  <span> 프로필 등록 </span>
+
+  <br>
+  <span style = "font-size: 1.5em; font-weight: bold;"> [ 프로필 등록 ]</span>
+
   <br>
   <img src="./docs/images/회원가입/MO_프로필 사진 등록.png" width="200" alt="회원가입 화면">
   <img src="./docs/images/회원가입/MO_프로필 입력.png" width="200" alt="회원가입 화면">
