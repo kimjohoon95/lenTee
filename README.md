@@ -157,7 +157,7 @@ lenTee(렌티) 는 최신 패션을 합리적인 가격에 즐길 수 있는 **�
 </details>
 
 <details>
-  <summary>🖼️ 게시글등록 화면</summary>
+  <summary>🖼️ 게시글 등록 화면</summary>
   <br>
   <img src="./docs/images/게시글등록/게시글 작성-1.png" width="200" alt="게시글 작성-1">
   <img src="./docs/images/게시글등록/게시글 작성.png" width="200" alt="게시글 작성">
