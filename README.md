@@ -22,25 +22,12 @@ lenTee(렌티) 는 최신 패션을 합리적인 가격에 즐길 수 있는 **�
 
 ## 🧩 사용 기술 스택
 
-| 분야       | 기술 및 라이브러리 |
-<br>
-| 프론트엔드 - React, Redux, Tailwind CSS 
-<br>
-| 백엔드 - Spring Boot, JPA, MySQL 
-<br>
-| 인증 - JWT(카카오, 네이버 등) 
-<br>
-| CI/CD - GitHub Actions 
-
-
-
 | 분야       | 기술 및 라이브러리         |
 |------------|----------------------------|
 | 프론트엔드 | React, Redux, Tailwind CSS |
 | 백엔드     | Spring Boot, JPA, MySQL    |
 | 인증       | JWT (카카오, 네이버 등)    |
 | CI/CD      | GitHub Actions             |
-
 
 ---
 
