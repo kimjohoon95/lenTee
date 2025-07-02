@@ -63,25 +63,25 @@
 <details>
   <summary>🖼️ 게시글 상세 화면</summary>
   <br>
-  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="600" alt="MO_게시글 상세-1">
-  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="600" alt="MO_게시글 상세-1">
-  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="600" alt="MO_게시글 상세-1">
-  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="600" alt="MO_게시글 상세-1">
-  <img src="./docs/images/게시글상세/MO_게시글 상세.png" width="600" alt="MO_게시글 상세">
-  <img src="./docs/images/게시글상세/게시글 작성-1.png" width="600" alt="게시글 작성-1">
-  <img src="./docs/images/게시글상세/게시글 작성.png" width="600" alt="게시글 작성">
-  <img src="./docs/images/게시글상세/게시글 조회-1.png" width="600" alt="게시글 조회-1">
-  <img src="./docs/images/게시글상세/게시글 조회-2.png" width="600" alt="게시글 조회-2">
-  <img src="./docs/images/게시글상세/게시글 조회-3.png" width="600" alt="게시글 조회-3">
-  <img src="./docs/images/게시글상세/게시글 조회-4.png" width="600" alt="게시글 조회-4">
-  <img src="./docs/images/게시글상세/게시글 조회.png" width="600" alt="게시글 조회">
+  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="200" alt="MO_게시글 상세-1">
+  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="200" alt="MO_게시글 상세-1">
+  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="200" alt="MO_게시글 상세-1">
+  <img src="./docs/images/게시글상세/MO_게시글 상세-1.png" width="200" alt="MO_게시글 상세-1">
+  <img src="./docs/images/게시글상세/MO_게시글 상세.png" width="200" alt="MO_게시글 상세">
+  <img src="./docs/images/게시글상세/게시글 작성-1.png" width="200" alt="게시글 작성-1">
+  <img src="./docs/images/게시글상세/게시글 작성.png" width="200" alt="게시글 작성">
+  <img src="./docs/images/게시글상세/게시글 조회-1.png" width="200" alt="게시글 조회-1">
+  <img src="./docs/images/게시글상세/게시글 조회-2.png" width="200" alt="게시글 조회-2">
+  <img src="./docs/images/게시글상세/게시글 조회-3.png" width="200" alt="게시글 조회-3">
+  <img src="./docs/images/게시글상세/게시글 조회-4.png" width="200" alt="게시글 조회-4">
+  <img src="./docs/images/게시글상세/게시글 조회.png" width="200" alt="게시글 조회">
 
 </details>
 
 <details>
   <summary>🖼️ 게시글등록 화면</summary>
   <br>
-  <img src="./docs/images/게시글등록/게시글 작성-1.png" width="600" alt="게시글 작성-1">
-  <img src="./docs/images/게시글등록/게시글 작성.png" width="600" alt="게시글 작성">
+  <img src="./docs/images/게시글등록/게시글 작성-1.png" width="200" alt="게시글 작성-1">
+  <img src="./docs/images/게시글등록/게시글 작성.png" width="200" alt="게시글 작성">
 </details>
 
