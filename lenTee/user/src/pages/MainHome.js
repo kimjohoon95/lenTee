@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {BottomTabBar} from '../components/BottomTabBar';
 import { imgs } from '../assets/images' 
 import { icons } from '../assets/icons' 
@@ -6,7 +7,7 @@ import '../styles/MainHome.css';
 import mainLogo from '../assets/lentee_logo.png'; 
 import reviewButton from '../assets/reviewButton.png'; 
 
-export const MainHome = () => {
+const MainHome = () => {
   const [activeTab, setActiveTab] = useState('home');
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -188,6 +189,11 @@ export const MainHome = () => {
     // navigate('/write-review');
   };
 
+  const navigate = useNavigate();
+  const clickProductDetail = (id) => {
+    navigate(`/ProductDetail/${id}`);
+  }
+
   return (
     <div className="home-container">
       {/* 헤더 */}
@@ -281,7 +287,7 @@ export const MainHome = () => {
           </div>
           <div className="product-grid-horizontal">
             {products.slice(0, 4).map((product) => (
-              <div key={product.id} className="product-card-small" onClick={() => window.location.href = `/ProductDetail/${product.id}`} >
+              <div key={product.id} className="product-card-small" onClick={() => clickProductDetail(product.id)} >
                 <img src={product.image} className="product-image-small"/>
                 <div className="product-info-small">
                   <p className="store-name">{product.category}</p>
@@ -335,3 +341,5 @@ export const MainHome = () => {
     </div>
   );
 };
+
+export default MainHome

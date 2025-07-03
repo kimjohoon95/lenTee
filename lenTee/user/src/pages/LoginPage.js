@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/LoginPage.css'; 
-import {MainHome} from './MainHome';
+import MainHome from '../pages/MainHome';
 
 export const LoginPage = ({ onLogin, onBack, onForgotPassword }) => {
   const [currentScreen, setCurrentScreen] = useState('login'); // 'login' or 'home'

@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.6.3"
+  "scripts": {
+    "start": "cd user && npm start"
   }
 }

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '../styles/ProductDetail.css';
 
+
 const ProductDetail = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
