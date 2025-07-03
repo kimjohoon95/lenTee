@@ -281,10 +281,10 @@ export const MainHome = () => {
           </div>
           <div className="product-grid-horizontal">
             {products.slice(0, 4).map((product) => (
-              <div key={product.id} className="product-card-small">
+              <div key={product.id} className="product-card-small" onClick={() => window.location.href = `/ProductDetail/${product.id}`} >
                 <img src={product.image} className="product-image-small"/>
                 <div className="product-info-small">
-                  <p className="store-name">{products.category}</p>
+                  <p className="store-name">{product.category}</p>
                   <p className="product-name-small">{product.name}</p>
                   <p className="product-subtitle-small">{product.subtitle}</p>
                   <p className="product-price-small">{product.price}</p>
