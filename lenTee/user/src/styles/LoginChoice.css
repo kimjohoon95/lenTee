@@ -1,0 +1,143 @@
+.loginChoice-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* 메인 콘텐츠 */
+.loginChoice-container .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+/* 로고 스타일 */
+
+.logoImg {
+  width: 242px;
+  height: 127px;
+  padding: 150px 74px 150px 74px;
+}
+/* 로그인 버튼 섹션 */
+.login-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 카카오 로그인 버튼 */
+.kakao-login-btn {
+  width: 100%;
+  background-color: #fee500;
+  color: black;
+  font-weight: 500;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 16px;
+}
+
+.kakao-login-btn:hover:not(.loading) {
+  background-color: #fde047;
+}
+
+.kakao-login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-content,
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.kakao-icon {
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* 로딩 스피너 */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 휴대폰 로그인 버튼 */
+.phone-login-btn {
+  width: 100%;
+  background-color: #1f2937;
+  color: white;
+  font-weight: 500;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 16px;
+}
+
+.phone-login-btn:hover {
+  background-color: #111827;
+}
+
+/* 회원가입 섹션 */
+.signup-section {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.signup-text {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.signup-link:hover {
+  color: #111827;
+}
+
+/* 하단 여백 */
+.bottom-spacer {
+  height: 64px;
+}

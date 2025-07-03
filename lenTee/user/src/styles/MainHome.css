@@ -1,0 +1,484 @@
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  width: 56px;
+  /* font-size: 20px;
+  font-weight: 900;
+  color: #333;
+  font-family: 'Brush Script MT', cursive, sans-serif; */
+}
+
+.search-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.main-banner {
+  height: 200px;
+  background-color: #333;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.banner-content {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.banner-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+.category-section {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #F0F0F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.category-text {
+  font-family: Pretendard;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0 20px 100px 20px;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.view-all {
+  background: none;
+  border: none;
+  color: #41509C;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: SUITE;
+  cursor: pointer;
+  display: flex;              
+  align-items: center;        
+  gap: 10px;                  
+  padding: 0;                
+}
+
+.view-all-icon {
+  width: 17px;
+  height: 18px;
+}
+
+.product-grid-horizontal {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.product-card-small {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.product-image-small {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.product-info-small {
+  text-align: left;
+}
+
+.product-name-small {
+  font-size: 12px;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.product-subtitle-small {
+  font-size: 10px;
+  color: #999;
+  margin: 0 0 4px 0;
+}
+
+.product-price-small {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  z-index: 1;
+}
+
+.badge.new {
+  background-color: #22c55e;
+}
+
+.badge.hot {
+  background-color: #ef4444;
+}
+
+.badge.recommended {
+  background-color: #8b5cf6;
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  display: flex;
+}
+
+.product-info .rented {
+  background-color: #999999;
+}
+.product-info .wait {
+  background-color: #FF4646;
+}
+.product-info .available {
+  background-color: #00DC4B;
+}
+.rent {
+  display: flex;             
+  align-items: center;       
+  justify-content: center;    
+  width: 49px;
+  height: 18px;
+  border-radius: 100px;
+  color: #FFFFFF;         
+  font-family: SUITE;     
+  font-size: 10px;
+  font-weight: 700;            
+  gap: 4px;    
+  padding: 2px 7px 2px 7px;            
+}
+.store-name {
+  font-size: 10px;
+  font-weight: 400;
+  color: #999;
+  margin: 0 0 4px 0;
+  font-family: SUITE;     
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 400;
+  color : #000000;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  font-family: SUITE;     
+}
+
+.product-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color : #000000;
+  margin: 0 0 8px 0;
+  font-family: SUITE;     
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 700;
+  color : #000000;
+  margin: 0;
+  font-family: SUITE;     
+}
+
+/* 플로팅 후기 작성 버튼 */
+  .floating-review-button {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  .floating-review-button:hover {
+    transform: scale(1.1);
+    background-color: #555;
+  }
+
+  .floating-review-button:active {
+    transform: scale(0.95);
+  }
+
+  .floating-button-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+.main-banner {
+  margin-bottom: 20px;
+}
+
+.banner-slider {
+  position: relative;
+  height: 200px;
+  margin: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+
+.banner-slider:active {
+  cursor: grabbing;
+}
+
+.banner-wrapper {
+  display: flex;
+  width: 400%; /* bannerData.length * 100% */
+  height: 100%;
+}
+
+.banner-slide {
+  width: 25%; /* 100% / bannerData.length */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.banner-decoration-1 {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.banner-decoration-2 {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.banner-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0 0 8px 0;
+}
+
+.banner-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
+}
+
+.banner-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 24px;
+  background-color: #333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .banner-slider {
+    height: 160px;
+    margin: 12px;
+  }
+  
+  .banner-title {
+    font-size: 20px;
+  }
+  
+  .banner-subtitle {
+    font-size: 14px;
+  }
+  
+  .banner-decoration-1 {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    right: -40px;
+  }
+  
+  .banner-decoration-2 {
+    width: 80px;
+    height: 80px;
+    bottom: -25px;
+    left: -25px;
+  }
+}
+
+/* 터치 디바이스를 위한 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .banner-slider {
+    cursor: default;
+  }
+  
+  .banner-slider:active {
+    cursor: default;
+  }
+}
+
+/* 접근성을 위한 스타일 */
+.indicator:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* 애니메이션 성능 최적화 */
+.banner-wrapper {
+  will-change: transform;
+}
+
+.banner-slide {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+/* 모바일 최적화 */
+@media (max-width: 480px) {
+  .category-section {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 0 16px 100px 16px;
+  }
+  .floating-review-button {
+    bottom: 100px;
+    right: 16px;
+  }
+}

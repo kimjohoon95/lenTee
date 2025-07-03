@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Splash from './components/Splash';
-import LoginPage from './components/LoginPage';
+import Splash from './pages/Splash';
+import LoginChoice from './pages/LoginChoice';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -29,7 +29,7 @@ function App() {
   }
 
   return (
-    <LoginPage />
+    <LoginChoice />
   )
 }
 
