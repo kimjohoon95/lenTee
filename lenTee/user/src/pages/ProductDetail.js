@@ -1,34 +1,48 @@
 // components/ProductDetail.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { X, MessageCircle, Share } from 'lucide-react';
 import '../styles/ProductDetail.css';
-
+import { icons } from '../assets/icons/productDetail'
+import { imgs } from '../assets/images/productDetail'
 
 const ProductDetail = () => {
   const [isLiked, setIsLiked] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+
   const [selectedImage, setSelectedImage] = useState(0);
 
   // 상품 데이터
   const product = {
     id: 1,
-    name: '깔끔한 실키 리본 셔츠 블라우스 디테일드입니다',
+    name: '깔끔한 실키 리본 셔츠 블라우스 대여 해드립니다',
     price: '29,000원',
     seller: {
-      name: '귀여운 쥐가',
-      rating: 'Lv 5, 물어보실 일마이',
-      avatar: '🐭'
+      name: '귀여운 쿼카',
+      rating: 'Lv 5, 찢어진 청바지',
+      avatar: imgs.profilSample
     },
     size: 'S (90~95)',
-    material: '폴리',
-    color: '화이트',
+    tradeType: '직거래',
+    tradeRegion: '부천',
     condition: '일반',
-    description: '귀엽고 오픈 리본젓이 즐거진니다.\n오픈룩 스핏에 컬하적 조각 젖어 벗습니다.',
+    description: '구매 후 한 번 입었던 옷입니다.\n오른쪽 소매에 실밥이 조금 풀려 있습니다.',
     images: [
-      { id: 1, url: '👚', alt: '메인 상품 이미지' },
-      { id: 2, url: '🔍', alt: '상품 디테일 이미지' }
+      { id: 'productImg', type : 'main', url: imgs.sampleImg, alt: '메인 상품 이미지' },
+      { id: 'productDetailImg', type : 'detail', url: imgs.productStatusSample, alt: '상품 디테일 이미지' },
+      { id: 'productDetailImg2', type : 'detail' , url: imgs.productStatusSample2, alt: '상품 디테일 이미지' }
     ],
-    tags: ['탑/블라우스', '드레푸리벤', '캐주얼코감']
+    rentStatus : 'AVAILABLE',
+    priceOfferStatus : 'POSSIBLE',
+    productStatus : '갓성B급',
+    productStatusDs : '약간의 얼룩, 올 풀림, 탈색 등이 있음',
+    tags: ['구찌', '하얀색', '결혼식장'],
+    countLike: 123
   };
-
   // 추천 상품들
   const recommendedProducts = [
     {
@@ -36,45 +50,47 @@ const ProductDetail = () => {
       name: '피자곰 에듀케이션 더베어론트',
       subtitle: 'MOUNTAIN CLIMBING BEAR',
       price: '29,000원',
-      image: '🧸',
-      badge: '새상품',
-      badgeColor: 'green'
+      category: '데이트 > 키링',
+      image: imgs.recommandSample,
+      rentStatus : 'AVAILABLE'
     },
     {
       id: 2,
       name: '피자곰 에듀케이션 더베어론트',
       subtitle: 'MOUNTAIN CLIMBING BEAR',
       price: '29,000원',
-      image: '🦊',
-      badge: '예약판매',
-      badgeColor: 'red'
+      category: '데이트 > 키링',
+      image: imgs.recommandSample2,
+      rentStatus : 'WAIT'
     },
     {
       id: 3,
       name: '피자곰 에듀케이션 더베어론트',
       subtitle: 'MOUNTAIN CLIMBING BEAR',
       price: '29,000원',
-      image: '🧸',
-      badge: '새상품',
-      badgeColor: 'green'
+      category: '데이트 > 키링',
+      image: imgs.recommandSample,
+      rentStatus : 'AVAILABLE'
     },
     {
       id: 4,
       name: '피자곰 에듀케이션 더베어론트',
       subtitle: 'MOUNTAIN CLIMBING BEAR',
       price: '29,000원',
-      image: '🧸',
-      badge: '택배',
-      badgeColor: 'gray'
+      category: '데이트 > 키링',
+      image: imgs.recommandSample2,
+      rentStatus : 'RENT'
     }
   ];
+  const navigate = useNavigate();
 
   const handleBackClick = () => {
-    console.log('뒤로가기');
-    // navigate(-1) 또는 뒤로가기 로직
+    // console.log('뒤로가기');
+    navigate('/MainHome');
   };
 
   const handleShareClick = () => {
+    openModal();
     console.log('공유하기');
   };
 
@@ -96,54 +112,58 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      {/* 상태바 */}
-      <div className="product-detail__status-bar">
-        <span>9:41</span>
-        <div className="product-detail__status-icons">
-          <span>📶</span>
-          <span>📶</span>
-          <span>🔋</span>
-        </div>
-      </div>
-
       {/* 헤더 */}
       <div className="product-detail__header">
         <button className="product-detail__back-btn" onClick={handleBackClick}>
-          ←
+          <img src = {icons.backPageIcon}/>
         </button>
-        <button className="product-detail__share-btn" onClick={handleShareClick}>
-          ↗
+        <button className="product-detail__share-btn" onClick={openModal}>
+          <img src = {icons.shareIcon}/>
         </button>
       </div>
 
       <div className="product-detail__content">
         {/* 상품 이미지 */}
         <div className="product-detail__image-section">
-          <div className="product-detail__main-image">
-            <span className="product-detail__image-placeholder">👚</span>
+          <div>
+            <img src={product.images.find(img => img.type === 'main')?.url}
+                alt={product.images.find(img => img.type === 'main')?.alt || '상품 이미지'}
+                className="product-detail__main-image"/>
           </div>
         </div>
 
         {/* 판매자 정보 */}
         <div className="product-detail__seller-info">
-          <div className="product-detail__seller-avatar">{product.seller.avatar}</div>
+          <div className="product-detail__seller-avatar">
+            <img src = {product.seller.avatar} />
+          </div>
           <div className="product-detail__seller-details">
             <h3 className="product-detail__seller-name">{product.seller.name}</h3>
             <p className="product-detail__seller-rating">{product.seller.rating}</p>
           </div>
-          <button className="product-detail__follow-btn">
-            팔로잉 가능 여부
-          </button>
         </div>
 
         {/* 상품 정보 */}
-        <div className="product-detail__product-info">
+        <div className="product-detail_info">
+          <div className="product-detail_label">
+            {product.rentStatus === 'RENT' && (
+              <p className="rent rented">대여중</p>
+            )}
+            {product.rentStatus === 'AVAILABLE' && (
+              <p className="rent available">대여가능</p>
+            )}
+            {product.rentStatus === 'WAIT' && (
+              <p className="rent wait">대여대기</p>
+            )}
+             {product.priceOfferStatus === 'POSSIBLE' && (
+              <p className="priceOffer possible">가격제안가능</p>
+            )}
+          </div>
           <p className="product-detail__breadcrumb">의류여성 › 블라우스</p>
           <h1 className="product-detail__title">{product.name}</h1>
           <p className="product-detail__price">{product.price}</p>
-          
           <button className="product-detail__chat-btn" onClick={handleChatClick}>
-            🗨 4명 대화고 진행중 상황입니다
+            총 4회 대여가 진행된 상품입니다.
           </button>
         </div>
 
@@ -156,12 +176,12 @@ const ProductDetail = () => {
               <span className="product-detail__detail-value">{product.size}</span>
             </div>
             <div className="product-detail__detail-item">
-              <span className="product-detail__detail-label">기질 및 질</span>
-              <span className="product-detail__detail-value">{product.material}</span>
+              <span className="product-detail__detail-label">거래 방식</span>
+              <span className="product-detail__detail-value">{product.tradeType}</span>
             </div>
             <div className="product-detail__detail-item">
-              <span className="product-detail__detail-label">기질 수체</span>
-              <span className="product-detail__detail-value">{product.color}</span>
+              <span className="product-detail__detail-label">거래지역</span>
+              <span className="product-detail__detail-value">{product.tradeRegion}</span>
             </div>
           </div>
           
@@ -178,13 +198,20 @@ const ProductDetail = () => {
         <div className="product-detail__condition">
           <h2 className="product-detail__section-title">상품 상태</h2>
           <div className="product-detail__condition-badge">
-            <span className="product-detail__condition-text">깨끗함</span>
-            <span className="product-detail__condition-desc">역시한 윤식 좋틱 능력이 월화적으로음</span>
+            <span className="product-detail__condition-text">{product.productStatus}</span>
           </div>
-          
+          <span className="product-detail__condition-desc">{product.productStatusDs}</span>
           <div className="product-detail__condition-images">
-            <div className="product-detail__condition-image">🔍</div>
-            <div className="product-detail__condition-image">👕</div>
+            {product.images
+              .filter(img => img.type === 'detail')
+              .map((img, index) => (
+                <img
+                  key={index}
+                  src={img.url}
+                  alt={img.alt || `상품 상세 이미지 ${index + 1}`}
+                  className="product-detail__condition-image"
+                />
+            ))}
           </div>
         </div>
 
@@ -202,10 +229,19 @@ const ProductDetail = () => {
                   <span className={`product-detail__recommended-badge product-detail__recommended-badge--${item.badgeColor}`}>
                     {item.badge}
                   </span>
-                  <div className="product-detail__recommended-img">{item.image}</div>
+                  <img src={item.image} className="product-detail__recommended-img"/>
                 </div>
                 <div className="product-detail__recommended-info">
-                  <p className="product-detail__recommended-category">데이트 › 기타</p>
+                  {item.rentStatus === 'RENT' && (
+                    <p className="rent rented">대여중</p>
+                  )}
+                  {item.rentStatus === 'AVAILABLE' && (
+                    <p className="rent available">대여가능</p>
+                  )}
+                  {item.rentStatus === 'WAIT' && (
+                    <p className="rent wait">대여대기</p>
+                  )}
+                  <p className="product-detail__recommended-category">{item.category}</p>
                   <h3 className="product-detail__recommended-name">{item.name}</h3>
                   <p className="product-detail__recommended-subtitle">{item.subtitle}</p>
                   <p className="product-detail__recommended-price">{item.price}</p>
@@ -214,16 +250,50 @@ const ProductDetail = () => {
             ))}
           </div>
         </div>
+        
+      {/* 모달 오버레이 */}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div 
+            className={`modal-content ${isModalOpen ? 'modal-open' : ''}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* 모달 헤더 */}
+            <div className="modal-header">
+              <h3 className="modal-title">공유 방법 선택</h3>
+              <button onClick={closeModal} className="modal-close-btn">
+                <X className="icon-24" />
+              </button>
+            </div>
+
+            {/* 모달 콘텐츠 */}
+            <div className="modal-body">
+              <button className="modal-option">
+                <MessageCircle className="icon-20" />
+                <span>카카오톡으로 공유</span>
+              </button>
+              
+              <button className="modal-option">
+                <Share className="icon-20" />
+                <span>링크로 공유</span>
+              </button>
+            </div>
+
+            {/* 하단 여백 */}
+            <div className="modal-footer"></div>
+          </div>
+        </div>
+      )}
       </div>
 
       {/* 하단 고정 버튼 */}
-      <div className="product-detail__bottom-bar">
+      <div className="product-detail bottom-bar">
         <button 
-          className={`product-detail__like-btn ${isLiked ? 'product-detail__like-btn--active' : ''}`}
+          className={`product-detail like-btn ${isLiked ? 'product-detail__like-btn--active' : ''}`}
           onClick={handleLikeClick}
         >
-          <span className="product-detail__like-icon">{isLiked ? '❤️' : '🤍'}</span>
-          <span className="product-detail__like-count">1/3</span>
+          <span className="product-detail__like-icon"></span>
+          <span className="product-detail__like-count">{product.countLike}</span>
         </button>
         <button className="product-detail__buy-btn" onClick={handleBuyClick}>
           채팅하기
